@@ -4,14 +4,23 @@
 *
   font-family: $fontFamily
   font-size: $fontSize
-  color: #333
+  color: $fontColor
 
 html, body
   width: 100%
   height: 100%
 
-header 
-  font-size: $headerSize
-  
-footer
-  font-size: $footerSize
+.wrapper
+  height: 100%
+  position: relative
+  box-sizing: border-box
+  margin: 0
+  display: flex
+  flex-flow: column
+  & > *
+    display: flex
+    justify-content: center
+  & > header 
+    font-size: $headerSize
+  & > footer
+    font-size: $footerSize
